@@ -39,4 +39,24 @@
       <img src="https://i.imgur.com/sRgqEHH.png" style="height:150px;margin-right:30px;border-radius:6px;">
       <img src="https://i.imgur.com/SKvzEDl.png" style="height:150px;margin-right:30px;border-radius:6px;">
       <img src="https://i.imgur.com/nsafClf.png" style="height:150px;margin-right:30px;border-radius:6px;">
-      <img src="https://i.imgur.com/5VIg4TO.png" style="height:150px;margin-right:30px;border-radius:
+      <img src="https://i.imgur.com/5VIg4TO.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/d5faEDa.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/ZWR3hPJ.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/PiC4iN7.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/ZoHHTvF.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/JnHoyyr.png" style="height:150px;margin-right:30px;border-radius:6px;">
+    </div>
+  </div>
+  <script>
+    var inner = document.getElementById('marquee-inner');
+    var pos = 0;
+    function scroll() {
+      pos -= 1;
+      if (pos <= -inner.scrollWidth / 2) pos = 0;
+      inner.style.transform = 'translateX(' + pos + 'px)';
+      requestAnimationFrame(scroll);
+    }
+    scroll();
+  </script>
+</body>
+</html>
