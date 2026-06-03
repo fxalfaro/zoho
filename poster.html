@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; background: transparent; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="marquee-track" style="overflow:hidden;width:100%;">
+    <div id="marquee-inner" style="display:flex;white-space:nowrap;">
+      <img src="https://i.imgur.com/Nm88iOz.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/2wR7jaH.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/POG82oO.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/9VeazwY.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/SHVxzn6.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/Ai8CnhV.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/bbD5TKK.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/Oonss39.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/L9GKsq1.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/aP3kqtt.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <!-- Duplicates for seamless loop -->
+      <img src="https://i.imgur.com/Nm88iOz.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/2wR7jaH.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/POG82oO.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/9VeazwY.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/SHVxzn6.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/Ai8CnhV.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/bbD5TKK.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/Oonss39.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/L9GKsq1.png" style="height:150px;margin-right:30px;border-radius:6px;">
+      <img src="https://i.imgur.com/aP3kqtt.png" style="height:150px;margin-right:30px;border-radius:6px;">
+    </div>
+  </div>
+  <script>
+    var inner = document.getElementById('marquee-inner');
+    var pos = 0;
+    function scroll() {
+      pos -= 1;
+      if (pos <= -inner.scrollWidth / 2) pos = 0;
+      inner.style.transform = 'translateX(' + pos + 'px)';
+      requestAnimationFrame(scroll);
+    }
+    scroll();
+  </script>
+</body>
+</html>
